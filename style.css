@@ -1,0 +1,134 @@
+* {
+    margin: 0;  padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+/* Body */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(198, 255, 145), rgb(119, 239, 255));
+}
+
+
+/* Main */
+main {
+    padding: .2em;
+    background-color: #0000001a;
+    box-shadow: .1em .1em .5em rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+
+/* Head */
+#head {
+    width: 25em; height: 3.5em;
+    letter-spacing: .1em;
+    position: relative;
+    color: #000000cc;
+    background-color: #0000001a;
+}
+#head h1 {
+    font-weight: 400;
+}
+#head p {
+    position: absolute;
+    right: 1em;
+    bottom: .5em;
+}
+#turn {
+    font-size: 1.25rem;
+}
+
+
+/* Ground */
+#ground {
+    width: 25em; height: 25em;
+    margin-top: .2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: .2em;
+}
+.place {
+    font-size: 2.5rem;
+    background-color: #0000001a;
+    color: #fff;
+    border: none;
+    outline: none;
+    transition: all .2s ease;
+}
+.place:nth-child(1),
+.place:nth-child(3),
+.place:nth-child(5),
+.place:nth-child(7),
+.place:nth-child(9) {
+    background-color: #0000003a;
+}
+
+.place:hover {
+    background-color: #0000008a;
+}
+
+
+/* Footer */
+footer {
+    font-size: .9rem;
+    opacity: .75;
+    position: absolute;
+    right: 1em;
+    bottom: .5em;
+}
+
+
+/* Media Query */
+@media(max-width: 450px) {
+    /* Head */
+    #head {
+        width: 17.5em; height: 2.5em;
+    }
+    #head h1 {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+    #head p {
+        font-size: .7rem;
+    }
+    #turn {
+        font-size: .9rem;
+    }
+
+    /* Ground */
+    #ground {
+        width: 17.5em; height: 17.5em;
+    }
+}
+
+
+@media(max-width: 310px) {
+    /* Head */
+    #head {
+        width: 12.5em; height: 1.5em;
+    }
+    #head h1 {
+        font-size: .9rem;
+        font-weight: 400;
+    }
+    #head p {
+        font-size: .5rem;
+    }
+    #turn {
+        font-size: .7rem;
+    }
+
+    /* Ground */
+    #ground {
+        width: 12.5em; height: 12.5em;
+    }
+}
